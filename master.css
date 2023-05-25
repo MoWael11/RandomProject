@@ -1,0 +1,269 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.introdoction {
+    width: 800px;
+    height: 75vh;
+    background: linear-gradient( to right, white -500px, black 300px, black 800px);
+    position: relative;
+    border-radius: 30px;
+    padding: 30px 30px;;
+}
+
+.image-1 {
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    border-radius: 10px;
+    width: 300px;
+    height: 60vh;
+}
+
+.image-1::after {
+    content: "";
+    width: 300px;
+    height: 60vh;
+    background-image: url(image/image-1.png);
+    background-size: 300px 60vh;
+    background-repeat: no-repeat;
+    position: absolute;
+    transition: .3s;
+    filter: grayscale(100%);
+    box-shadow: inset -14px -15px 20px 10px black;
+    cursor: pointer;
+}
+
+.image-1::before{
+    content: "parla di meno";
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 475px;
+    right: 100px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.image-1:hover::before {
+    width: 200px;
+    height: 20px;
+}
+
+.image-1:hover::after {
+    filter: grayscale(0);
+    box-shadow: inset -9px -9px 20px 10px black;
+}
+
+.name {
+    text-transform: none;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #9fa165;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.name:hover {
+    text-shadow: 0px 0px 20px;
+    color: yellow;
+}
+
+.descreption {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff99;
+    cursor: pointer;
+    transition: .5s;
+    margin-bottom: 60px;
+}
+
+.descreption:hover {
+    color: white;
+    text-shadow: 0px 0px 20px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+ul {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 80px repeat(4, 50px);
+    grid-template-rows: 50px 50px;
+    column-gap: 15px;
+    margin-top: 30px;
+    position: relative;
+}
+
+span {
+    font-weight: bold;
+    font-size: 18px;
+    color: #bbbbbbcc;
+    grid-column: 1 / span 5;
+    cursor: pointer;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+li {
+    box-sizing: content-box;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: .0s;
+}
+
+.letters {
+    width: 50px;
+    height: 50px;
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+li:hover {
+    border: solid yellow 2px;
+}
+
+.hr-1 {
+    width: 1px;
+    height: 60px;
+    background-color: yellow;
+    border: none;
+    border-radius: 2px; 
+    position: absolute;
+    top: 45px;
+    left: 70px;
+}
+
+.hr-2 {
+    width: 345px;
+    border: none;
+    height: 1px;
+    background-color: yellow;
+    border-radius: 2px;
+}
+
+li::before{
+    color: white;
+    content: "";
+    transition: 1s ;
+    transition-timing-function: ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 170px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+li::after{
+    content: "";
+    font-size: 14px;
+    color: #ffffff99;
+    position: absolute;
+    transition: 1s 1s;
+    left: 0;
+    top: 210px;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+li:hover::before{
+    width: 300px;
+    height: 20px;
+}
+
+li:hover::after{
+    width: 400px;
+    height: auto;
+}
+
+.image-2::before {
+    content: "cespuglio";
+}
+
+.image-2:after{
+    content: "nei cespugli si cura e recupera mana";
+}
+
+.image-3::before{
+    content: "cespuglio";
+}
+
+.image-3::after{
+    content: "foresta nera";
+}
+
+.image-4::before{
+    content: "hide";
+}
+
+.image-4::after{
+    content: "si nasconde e diventa immortale";
+}
+
+.image-5::before{
+    content: "famiglia di carlos";
+}
+
+.image-5::after{
+    content: "se ti becchiamo in giro ti spacchiamo";
+}
+
+.image-6::before{
+    content: "gege";
+}
+
+.image-6::after{
+    content: "pentakill nella taska";
+}
+
+.position{
+    position: relative;
+}
+
+.difficult {
+    position: absolute;
+    top: 220px;
+    right:75px;
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: 5px;
+    column-gap: 5px;
+}
+
+.difficult div{
+    position: relative;
+    background-color: rgb(0, 145, 255);
+    grid: 5px 5px;
+    border-radius: 2px;
+    box-shadow: 10px 10px 20px blue;
+}
+
+.difficult::after{
+    content: "difficulty:";
+    position: absolute;
+    color: #bbbbbbcc;
+    top: -30px;
+}
